@@ -2,6 +2,8 @@
 
 View metrics for AWS SQS queues in your terminal.
 
+![](./img/graph.png)
+
 <hr>
 
 ## Flags
@@ -16,8 +18,14 @@ View metrics for AWS SQS queues in your terminal.
     	The url of the SQS queue
 ```
 
-## Example
+## Build
 
+```sh
+go build
 ```
 
+## Example
+
+```sh
+sqsgraph -queue <queue url>
 ```
