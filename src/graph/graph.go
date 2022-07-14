@@ -2,7 +2,7 @@ package graph
 
 import (
 	"fmt"
-	"sqsmonit/src/sqs"
+	"sqsgraph/src/sqs"
 	"time"
 
 	"github.com/guptarohit/asciigraph"

@@ -1,4 +1,4 @@
-module sqsmonit
+module sqsgraph
 
 go 1.18
 

@@ -2,7 +2,7 @@ package main
 
 import (
 	"flag"
-	"sqsmonit/src/graph"
+	"sqsgraph/src/graph"
 )
 
 var (
