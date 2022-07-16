@@ -11,10 +11,11 @@ View metrics for AWS SQS queues in your terminal.
 ```
   -interval int
     	Internal to updating graph (default 10)
+  -list-queues
+    	List all SQS queues
   -metric string
-    	The metric name to visualize in the graph
-        (default "ApproximateNumberOfMessages")
-  -queue string
+    	The metric name to visualize in the graph, default is ApproximateNumberOfMessages (default "ApproximateNumberOfMessages")
+  -queue-url string
     	The url of the SQS queue
 ```
 
