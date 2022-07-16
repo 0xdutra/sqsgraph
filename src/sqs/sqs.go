@@ -1,6 +1,7 @@
 package sqs
 
 import (
+	"fmt"
 	"log"
 	"strconv"
 
@@ -8,6 +9,23 @@ import (
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/sqs"
 )
+
+func ListAllQueues() {
+	sess := session.Must(session.NewSessionWithOptions(session.Options{
+		SharedConfigState: session.SharedConfigEnable,
+	}))
+
+	svc := sqs.New(sess)
+
+	result, err := svc.ListQueues(&sqs.ListQueuesInput{})
+	if err != nil {
+		log.Panic(err)
+	}
+
+	for _, queue := range result.QueueUrls {
+		fmt.Println(*queue)
+	}
+}
 
 func QueueAttributes(queueUrl string, metricName string) uint64 {
 	sess := session.Must(session.NewSessionWithOptions(session.Options{
